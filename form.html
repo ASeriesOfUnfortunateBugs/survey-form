@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="container">
+      <h1 id="title">Customer Satisfaction Survey</h1>
+      <p id="description">We care about your recent experience with our services. Please use the form below to let us know how we did. Thank you for doing business with us!</p>
+      <div id="form">
+        <form id="survey-form">
+          <fieldset>
+            <label for="name" id="name-label">
+              Name <input name="name" id="name" type="text" placeholder="Enter your name" required />
+            </label>
+            <label for="email" id="email-label">
+              E-mail <input name="email" id="email" type="email" placeholder="Enter your e-mail" required />
+            </label>
+            <label for="number" id="number-label">
+              Age <input name="age" id="number" type="number" min="13" max="120" placeholder="Enter your age" />
+            </label>
+          </fieldset>
+          <fieldset>
+            <label for="dropdown" id="dropdown-label">How satisfied are you with the provided service?<select id="dropdown">
+              <option selected disabled>(select a rating)</option>
+              <option value="1">1 - lowest</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5 - highest</option>
+            </select></label>
+          </fieldset>
+          <fieldset>
+            <legend>Which department assisted you?</legend>
+            <label for="sales-department" id="sales-label">
+              <input name="department" id="sales-department" value="sales" type="radio" />
+              Sales
+            </label>
+            <label for="service-department" id="service-label">
+              <input name="department" id="service-department" value="service" type="radio" />
+              Service
+            </label>
+            <label for="warranty-department" id="">
+              <input name="department" id="warranty-department" value="warranty" type="radio" />
+              Warranty
+            </label>
+          </fieldset>
+          <fieldset id="clearfix">
+            <legend>How did we assist you during your visit?</legend>
+            <div id="label-checkbox">
+              <label for="walk-in" id="walk-in-label">
+                <input name="method[]" id="walk-in" value="walk-in" type="checkbox" /> Walk-in
+              </label>
+            </div>
+            <div id="label-checkbox">
+              <label for="appointment" id="appointment-label">
+                <input name="method[]" id="appointment" value="appointment" type="checkbox" /> Appointment
+              </label>
+            </div>
+            <div id="label-checkbox">
+              <label for="by-phone" id="by-phone-label">
+                <input name="method[]" id="by-phone" value="phone" type="checkbox" /> By phone
+              </label>
+            </div>
+            <div id="label-checkbox">
+              <label for="by-email" id="by-email-label">
+                <input name="method[]" id="by-email" value="e-mail" type="checkbox" /> By e-mail
+              </label>
+            </div>
+            <div id="label-checkbox">
+              <label for="online-form" id="online-form-label">
+                <input name="method[]" id="online-form" value="online-form" type="checkbox" /> Online form
+              </label>
+            </div>
+            <div id="label-checkbox">
+              <label for="other" id="other-label">
+                <input name="method[]" id="other" value="other" type="checkbox" /> Other
+              </label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <label for="comments" id="comments-label">Comments <textarea rows="4" placeholder="Please leave any additional comments here"></textarea></label>
+          </fieldset>
+          <input id="submit" type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
